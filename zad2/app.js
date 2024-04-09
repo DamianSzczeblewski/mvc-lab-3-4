@@ -32,8 +32,8 @@ app.use(
     })
 );
 
-app.use(errorRouter);
-app.use(studentRouter);
+app.use(errorRouter.getNotFound);
+app.use(studentRouter.getAddNewStudentPage);
 
 app.listen(PORT, () => {
     console.log(`Server running on ${PORT}`);
